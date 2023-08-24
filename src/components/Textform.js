@@ -5,7 +5,7 @@ export default function Textform(props) {
     const handleupclick=()=>{
         let newtext=text.toUpperCase();
         setText(newtext)
-       
+        props.showalert('Letters are converted in uppercase','success')
 
     }
     const handleloclick=()=>{
@@ -13,19 +13,23 @@ export default function Textform(props) {
         let newtext=text.toLowerCase();
         
         setText(newtext)
+        props.showalert('Letters are converted in Lowercase','success')
 
     }
     const handleclr=()=>{
       let newtext="";
       setText(newtext);
+      props.showalert('Text Cleared','success')
     }
     const handlesentence=()=>{
       let newtext=text[0].toUpperCase();
        let newtext1=text.slice(1).toLowerCase();
        setText(newtext+newtext1);
+       props.showalert('Words are now sentence','success')
     }
     const handleCapital = () => {
-      const words = text.split(" "); // Split the text into words
+      const words = text.split(" ");
+      props.showalert('Converted in capital letter','success') // Split the text into words
   
       for (let i = 0; i < words.length; i++) {
           words[i] = words[i][0].toUpperCase() + words[i].slice(1).toLowerCase();
