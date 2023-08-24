@@ -2,7 +2,6 @@ import './App.css';
 import Navbar from './components/Navbar.js';
 import Textform from './components/Textform.js';
 import Alert from './components/Alert.js';
-import About from './components/About.js';
 import { useState } from 'react';
 import {
   BrowserRouter as Router,
@@ -50,7 +49,6 @@ function App() {
         <Alert alert={alert} />
         <div className="container">
           <Routes>
-            <Route path="/about" element={<About />} />
             <Route path="/" element={<Textform title="Analyse your keywords" showalert={alert} />} />
           </Routes>
         </div>
