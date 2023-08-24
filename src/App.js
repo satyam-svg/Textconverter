@@ -25,19 +25,21 @@ const togglemode=()=>{
     document.body.style.backgroundColor='#343a40';
     document.body.style.color='White';
     showalert('Dark mode enabled','success')
+    document.title='Textconverter-Dark mode'
   }else{
     setmode('light');
     settext('Enable dark mode');
     document.body.style.backgroundColor='white';
     document.body.style.color='black';
     showalert('Light mode enabled','success')
+    document.title='Textconverter-Light mode'
   }
 }
   return (
     <>
      <Navbar mode1={mode} text1={text} togglemode={togglemode} />
      <Alert alert={alert}/>
-     <Textform title="Analyse your keywords" showalert={showalert} />
+     <Textform title="Analyse your keywords" showalert={alert} />
      {/* <About title="About Us"/> */}
      </>
   );
